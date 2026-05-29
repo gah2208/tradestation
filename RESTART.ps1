@@ -1,28 +1,4 @@
-# ============================================================
-#  CTV2 RESTART.ps1
-#  Revision: 2.3
-#  v2.3 - Banner title updated from CTV2 to VTB (user-facing branding).
-#  v2.2 - Copyright (c) Gregory Howard 2026 All rights reserved added to
-#          console banner. Preflight call updated to --mode restart so
-#          preflight_check.py logs acceptance as "Restart Trading".
-#  v2.1 - Clear live_confirmed.flag before preflight. Restart always
-#          requires fresh live trading confirmation.
-#          Mirrors START_TRADING.ps1 pattern exactly.
-#          Removed temp-file/Start-Process approach entirely.
-#  v1.9 - Added -u flag to python call in inner script.
-#  v1.8 - Write inner runner script to temp file, launch with -File.
-#  v1.7 - Removed TWS integrity check. CTV now uses Tradier.
-#  v1.6 - Sandbox mode removed. Default is paper (LIVE_TRADING=False in config).
-#
-#  Clears risk suspension flag and restarts the runner in the current terminal.
-#
-#  Usage:
-#    powershell -ExecutionPolicy Bypass -File RESTART.ps1          (paper mode)
-#    powershell -ExecutionPolicy Bypass -File RESTART.ps1 -Live    (live mode)
-# ============================================================
-param(
-    [switch]$Live
-)
+
 
 Set-Location -Path $PSScriptRoot
 
